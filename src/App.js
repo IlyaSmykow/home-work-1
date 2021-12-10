@@ -1,6 +1,6 @@
 import './App.css';
-import { ProfileFunc } from './tutorial_1/Profile_Func';
-import { ProfileClass } from './tutorial_1/Profile_Class';
+import { ProfileFunc } from './tutorial_9/Profile_Func';
+import { ProfileClass } from './tutorial_9/Profile_Class';
 
 function App() {
 
