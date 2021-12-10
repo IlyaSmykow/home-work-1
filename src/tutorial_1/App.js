@@ -1,8 +1,7 @@
-import './App.css';
-import { ProfileFunc } from './tutorial_9/Profile_Func';
-import { ProfileClass } from './tutorial_9/Profile_Class';
+import { ProfileFunc } from './Profile_Func';
+import { ProfileClass } from './Profile_Class';
 
-function App() {
+export function App() {
 
   const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня",
         "июля", "августа", "сентября", "октября", "ноября", "декабря"
@@ -15,5 +14,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
