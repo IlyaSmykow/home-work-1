@@ -1,6 +1,5 @@
-export const ProfileFunc = ({name, registredAt}) => {
-
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+export const ProfileFunc = ({name, registredAt, options}) => {
+    
     const dataRegistration = registredAt.toLocaleDateString('ru-RU', options);
 
     return (
