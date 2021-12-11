@@ -1,8 +1,7 @@
-export const ProfileFunc = ({name, registredAt, monthNames}) => {
+export const ProfileFunc = ({name, registredAt}) => {
 
-    const month = monthNames[registredAt.getMonth()];
-    const year = registredAt.getFullYear();
-    const day = registredAt.getDate();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const dataRegistration = registredAt.toLocaleDateString('ru-RU', options);
 
     return (
         <div style={
@@ -15,9 +14,9 @@ export const ProfileFunc = ({name, registredAt, monthNames}) => {
                     textAlign: 'left'
                     }
         }>
-            Привет, <span style={{fontWeight: 'bold'}}>{name}</span>!
+            Привет, <span style={{fontWeight: 'bold'}}>{name.split(" ")[0]}</span>!
             <br/>
-            Дата регистрации: {day} {month} {year}
+            Дата регистрации: {dataRegistration.substring(0, dataRegistration.lastIndexOf(" "))}
         </div>
     )
 };
