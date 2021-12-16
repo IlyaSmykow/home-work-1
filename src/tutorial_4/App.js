@@ -15,9 +15,10 @@ export const App = () => {
     };
 
     const generatePhrase = () => {
-        let adjective = getRandom(adjectivesArr);
+        let adjective1 = getRandom(adjectivesArr);
+        let adjective2 = getRandom(adjectivesArr);
         let noun = getRandom(nounsArr);
-        setPhase([...phrase, adjective + ' ' + adjective + ' ' + noun]);
+        setPhase([...phrase, adjective1 + ' ' + adjective2 + ' ' + noun]);
     };
 
     const clearPhrase = () => {
