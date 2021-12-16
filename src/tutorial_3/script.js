@@ -32,6 +32,6 @@ button.addEventListener('click', (e) => {
     let inputValue = document.getElementById('input').value;
     if(inputValue === '') return;
     handleClickAdd(inputValue);
-    document.getElementById('input').value = '';
+    inputValue = '';
     render();
 });
