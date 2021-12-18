@@ -3,14 +3,12 @@ import { ProfileClass } from './Profile_Class';
 
 export function App() {
 
-  const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня",
-        "июля", "августа", "сентября", "октября", "ноября", "декабря"
-  ];
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <div className="App">
-      <ProfileFunc name="Вася Пупкин" registredAt={new Date(2021, 5, 22)} monthNames={monthNames}/>
-      <ProfileClass name="Вася Пупкин" registredAt={new Date()} monthNames={monthNames}/>
+      <ProfileFunc name="Вася Пупкин" registredAt={new Date(2021, 5, 22)} options={options}/>
+      <ProfileClass name="Вася Пупкин" registredAt={new Date()} options={options}/>
     </div>
   );
 }
