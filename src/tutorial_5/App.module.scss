@@ -1,0 +1,37 @@
+.root {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__wrapper {
+    margin-top: 20px;
+    button {
+        width: 100%;
+    }
+}
+
+.form__input_first, .form__input_second {
+    margin-top: 20px;
+}
+
+.form__input_text {
+    margin-top: 20px;
+    input {
+        height: 100px;
+    }
+}
+
+.review__wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.review__text_block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
