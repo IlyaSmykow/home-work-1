@@ -7,11 +7,19 @@ import "./styles.css";
 
 export const App = () => {
 
+    const defaultValues = {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        aboutMe: ""
+    };
+
     const { handleSubmit, register, formState, reset } = useForm();
 
     const onSubmit = data => {
         console.log(data);
-        reset();
+        reset(defaultValues);
     };
 
     return (
@@ -72,7 +80,7 @@ export const App = () => {
             </div>
             <div className="row">
             <TextField 
-                name="about" 
+                name="aboutMe" 
                 label="Обо мне" 
                 {...register("aboutMe")}
                 fullWidth 
@@ -84,7 +92,7 @@ export const App = () => {
             <Button onClick={handleSubmit(onSubmit)} variant="contained" color="primary">
                 Зарегистрироваться
             </Button>
-            <Button onClick={() => reset()} type="reset" variant="contained" color="secondary">
+            <Button onClick={() => reset(defaultValues)} type="reset" variant="contained" color="secondary">
                 Очистить
             </Button>
             </div>
