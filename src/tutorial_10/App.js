@@ -28,8 +28,7 @@ export const App = () => {
     const search = async() => {
         try {
             setIsLoading(true);
-            const response = await axios.get(`https://api.github.com/users/${query}`);
-            const { data } = response;
+            const { data } = await axios.get(`https://api.github.com/users/${query}`);
             setUserData(data);
             setIsLoading(false);
         } catch (error) {
@@ -46,10 +45,10 @@ export const App = () => {
         }
     };
 
-    const searchWithButton = async(event) => {
+    const searchWithButton = event => {
         setInfo('');
         event.preventDefault();
-        await search();
+        search();
     };
 
     // Если раскомментировать следующий блок, input будет работать без кнопки

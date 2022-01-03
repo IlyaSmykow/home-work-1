@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export const UserCard = ({userData}) => {
 
-    let url= new URL(window.location.href);
+    const url= new URL(window.location.href);
     const [userUrl, setUserUrl] = useState('');
 
     useEffect(() => {
@@ -64,7 +64,7 @@ export const UserCard = ({userData}) => {
                         }
                         </li>
                         {
-                            userUrl && <li><input defaultValue={userUrl} readOnly={true}/>
+                            userUrl && <li><input defaultValue={userUrl} readOnly />
                                                 <span onClick={copyUserUrl}>копировать</span>
                                         </li>
                         }
